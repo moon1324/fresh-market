@@ -1,6 +1,12 @@
 import express from "express";
-import passport from "passport";
-import { deleteUser, signupUser, loginUser, logoutUser, updateUser } from "../controller/user/user.js";
+// import passport from "passport";
+import {
+  deleteUser,
+  signupUser,
+  loginUser,
+  logoutUser,
+  updateUser,
+} from "../controller/user/user.js";
 
 const userRouter = express.Router();
 

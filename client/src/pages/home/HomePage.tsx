@@ -24,7 +24,7 @@ export default function HomePage() {
               Apple
             </p>
             <img
-              src="/img/products/apple.jpg"
+              src="/img/products/Apples.jpg"
               alt="Apple"
               className="w-60 h-60 object-cover" // Increased size
             />
@@ -34,7 +34,7 @@ export default function HomePage() {
               Banana
             </p>
             <img
-              src="/img/products/banana.jpg"
+              src="/img/products/Bananas.jpg"
               alt="Banana"
               className="w-60 h-60 object-cover" // Increased size
             />

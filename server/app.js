@@ -3,11 +3,12 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import connect from "./connect/connect.js";
+import rootRouter from "./routes/rootRouter.js";
 
 dotenv.config();
 const { PORT } = process.env;
 
-// MongoDB 연결
+// Connect MongoDB
 connect();
 
 const app = express();
@@ -19,14 +20,16 @@ app.use(bodyParser.json());
 
 // cors
 // app.use(express.urlencoded({ extended: false }));
-// app.use(
-//     cors({
-//         origin: "*",
-//         method: ["GET", "POST", "DELETE", "PUT"],
-//         credential: true,
-//     })
-// );
+app.use(
+  cors({
+    origin: "*",
+    method: ["GET", "POST", "DELETE", "PUT"],
+    credential: true,
+  })
+);
+
+app.use("/", rootRouter);
 
 app.listen(port, () => {
-    console.log(`Server is on ${port} port!`);
+  console.log(`Server is on ${port} port!`);
 });
